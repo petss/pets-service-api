@@ -5,9 +5,6 @@ const router = express.Router();
 
 const memberController = require('../../controller/member/memberController');
 
-router.post('/signin/', memberController.signin);
-
-router.get('/signin/success', memberController.signin.success);
-router.get('/signin/failure', memberController.signin.failure);
+router.post('/login/', memberController.login)
 
 module.exports = router;

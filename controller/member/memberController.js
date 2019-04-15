@@ -1,7 +1,7 @@
 'use strict'
 
-const signin = require('./signin/memberSignin')
+const login = require('./signin/memberSignin')
 
 module.exports = {
-    signin: signin
+    login: login
 }
