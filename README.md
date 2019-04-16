@@ -10,5 +10,5 @@ npm run start
 > 아이디 패스워드
 ```
 id: test
-password: test123
+password: 1234
 ```

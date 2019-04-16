@@ -27,9 +27,16 @@ module.exports = ( req, res, next ) => {
     const is_member = MEMBER.filter(data => data.id === id && data.password === password)
     console.log(is_member)
     if ( is_member.length ) {
-        res.send(JSON.stringify({ status: 200, member: { id: id }, response: 'Ok' }))
+        res.json({
+          status: 200,
+          member: { id: id },
+          response: 'Ok'
+        })
     }
     else {
-        res.send(JSON.stringify({ status: 401, response: 'Unauthorized' }))
+        res.json({
+          status: 401,
+          response: 'Unauthorized'
+        })
     }
 }
