@@ -13,8 +13,8 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/indexRouter'));
-app.use('/member', require('./routes/member/memberRouter'));
+app.use('/', require('./routes/index'));
+app.use('/user', require('./routes/user'));
 
 app.use(function (req, res, next) {
   const error = new Error('Not Found');
